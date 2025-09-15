@@ -1,0 +1,67 @@
+### Testar API de Alunos
+### Execute estes comandos no VS Code com a extensão REST Client ou no Postman
+
+### 1. Verificar se a API está rodando
+GET https://localhost:7278/api/alunos
+Accept: application/json
+
+###
+
+### 2. Adicionar um novo aluno
+POST https://localhost:7278/api/alunos
+Content-Type: application/json
+
+{
+  "nome": "João Silva",
+  "email": "joao.silva@email.com",
+  "idade": 25
+}
+
+###
+
+### 3. Adicionar outro aluno
+POST https://localhost:7278/api/alunos
+Content-Type: application/json
+
+{
+  "nome": "Maria Santos",
+  "email": "maria.santos@email.com",
+  "idade": 30
+}
+
+###
+
+### 4. Listar todos os alunos novamente
+GET https://localhost:7278/api/alunos
+Accept: application/json
+
+###
+
+### 5. Buscar aluno por ID
+GET https://localhost:7278/api/alunos/1
+Accept: application/json
+
+###
+
+### 6. Atualizar um aluno
+PUT https://localhost:7278/api/alunos/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "nome": "João Silva Atualizado",
+  "email": "joao.silva.novo@email.com",
+  "idade": 26
+}
+
+###
+
+### 7. Deletar um aluno
+DELETE https://localhost:7278/api/alunos/2
+Accept: application/json
+
+###
+
+### 8. Verificar se o aluno foi deletado
+GET https://localhost:7278/api/alunos
+Accept: application/json
